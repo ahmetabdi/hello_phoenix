@@ -1,0 +1,5 @@
+<%= {status, result} = Tmdb.Movie.popular; for result <- result["results"] do %>
+  <%= result["title"] %><br/>
+
+  <img src="http://image.tmdb.org/t/p/w92<%= result["poster_path"] %>">
+<% end %>
